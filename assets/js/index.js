@@ -67,7 +67,7 @@ var listFilm = [
         "name": "Inception",
         "view": 112122,
         "desc": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
-        "image": "https://image.thanhnien.vn/w1024/Uploaded/2022/ygtmjz/2021_05_11/venomposter_tdet.jpg",
+        "image": "https://m.media-amazon.com/images/M/MV5BZGFjOTRiYjgtYjEzMS00ZjQ2LTkzY2YtOGQ0NDI2NTVjOGFmXkEyXkFqcGdeQXVyNDQ5MDYzMTk@._V1_.jpg",
         "category": "Drama",
         "link": "https://www.youtube.com/embed/YoHD9XEInc0"
     },
@@ -181,8 +181,6 @@ var listFilm = [
     }
 ]
 
-var curSuggestPage = 0, curTopviewPage = 0
-
 const sortView = listFilm => {
     newList = [...listFilm]
 
@@ -196,5 +194,15 @@ const sortView = listFilm => {
 
     return newList
 }
+
+function compare( a, b ) {
+    if ( a.view < b.view ){
+      return 1;
+    }
+    if ( a.view > b.view ){
+      return -1;
+    }
+    return 0;
+  }
 
 const toggle = (e, className) => document.querySelector(e).classList.toggle(className)
