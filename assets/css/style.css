@@ -65,7 +65,7 @@ ul {
 .header__logo {
     position: absolute;
     height: 100%;
-    left: 10px;
+    left: 40px;
 }
 
 .header__logo img {
@@ -96,8 +96,13 @@ ul {
 
 .header__nav__item:hover,
 .header__nav__item:hover.active,
-.header__nav__item:hover > a {
+.header__nav__item:hover > a,
+.header__nav__item:hover > .header__subnav > .subnav__item:hover {
     color: #ff4d00;
+}
+
+.header__nav__item:hover > .header__subnav {
+    color: var(--text-color);
 }
 
 .header__nav__item.active {
@@ -113,6 +118,8 @@ ul {
     background: #262626;
     width: 100px;
     padding: 10px;
+    border-top: 2px solid #ff4d00;
+    border-radius: 0 0 8px 8px;
 }
 
 #category:hover .header__subnav{
@@ -123,7 +130,7 @@ ul {
 
 .header__search {
     position: absolute;
-    right: 10px;
+    right: 40px;
     background-color: #0d0d0d;
     border-radius: 6px;
     overflow: hidden;

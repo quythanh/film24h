@@ -181,7 +181,7 @@ var listFilm = [
     }
 ]
 
-var curPage = 0
+var curSuggestPage = 0, curTopviewPage = 0
 
 const sortView = listFilm => {
     newList = [...listFilm]
@@ -196,3 +196,5 @@ const sortView = listFilm => {
 
     return newList
 }
+
+const toggle = (e, className) => document.querySelector(e).classList.toggle(className)

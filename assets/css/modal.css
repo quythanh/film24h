@@ -57,9 +57,13 @@
     cursor: pointer;
 }
 
-.modal__radio.checked,
-.modal__radio:hover {
+.modal__radio.checked {
     background-color: #ff4d00;
+}
+
+.modal__radio:hover {
+    background-color: none;
+    border-color: #ff4d00;
 }
 
 .modal__footer {

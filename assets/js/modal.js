@@ -1,8 +1,6 @@
-const toggleModal = () => document.querySelector('.modal').classList.toggle('hide')
-
-document.querySelector('#premium').addEventListener('click', () => toggleModal())
-document.querySelector('.fas.fa-times').addEventListener('click', () => toggleModal())
-document.querySelector('.modal').addEventListener('click', e => e.target == e.currentTarget ? toggleModal() : e.preventDefault())
+document.querySelector('#premium').addEventListener('click', () => toggle('.modal', 'hide'))
+document.querySelector('.fas.fa-times').addEventListener('click', () => toggle('.modal', 'hide'))
+document.querySelector('.modal').addEventListener('click', e => e.target == e.currentTarget ? toggle('.modal', 'hide') : e.preventDefault())
 
 const radios = document.querySelectorAll('.modal__radio')
 radios.forEach(radio => radio.addEventListener('click', () => {

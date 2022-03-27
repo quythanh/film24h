@@ -1,5 +1,7 @@
-const renderFilm = (page, listFilm, root) => {
-    root.innerHTML = listFilm.slice(page*4, page*4+4).map(film => `
+const renderFilm = (listFilm, className) => {
+    root = document.querySelector(className)
+    root.innerHTML = listFilm.map(film => `
+        <div class="listPrev"><i class="far fa-chevron-left"></i></div>
         <div class="film" id="film-${film.id}">
             <div class="film__img">
                 <img src="${film.image}" alt="${film.name}">
@@ -10,14 +12,23 @@ const renderFilm = (page, listFilm, root) => {
                 ${new Intl.NumberFormat().format(film.view)}
             </div>
         </div>
+        <div class="listNext"><i class="far fa-chevron-right"></i></div>
     `).join("")
 
     document.querySelectorAll('.film').forEach(f => f.addEventListener('click', () => {
         localStorage.setItem('curID', (f.id.split('-')[1] - 1))
         window.location.href = './info.html'
     }))
+
+    document.querySelector(className + ' .far.fa-chevron-left').addEventListener('click', () => renderFilm(t(listFilm), className))
+    document.querySelector(className + ' .far.fa-chevron-right').addEventListener('click', () => renderFilm(next(listFilm), className))
 }
 
-renderFilm(curPage, listFilm, document.querySelector('.content__suggest'))
+const next = listFilm => listFilm.push(listFilm[0]).shift()
+const prev = listFilm => listFilm.unshift(listFilm[listFilm.length - 1]).pop()
 
-renderFilm(0, sortView(listFilm), document.querySelector('.content__top-view'))
+renderFilm(listFilm, '.content__suggest')
+
+renderFilm(sortView(listFilm), '.content__top-view')
+
+window.addEventListener('click', e => console.log(e.target))

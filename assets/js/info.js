@@ -20,8 +20,17 @@ document.querySelector('.info').innerHTML = `
     <div class="info__category">Category: ${f.category}</div>
     <div class="info__desc">${f.desc}</div>
 </div>
+
+<div class="video">
+    <div class="video__inner">
+        <iframe width="1120" height="630" src="${f.link}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
 `
 
-{/* <div class="videofilm">
-    <iframe width="1120" height="630" src="${f.link}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div> */}
+const video = document.querySelector('.video')
+document.querySelector('.info__btn-play').addEventListener('click', () => toggle('.video', 'show'))
+
+video.addEventListener('click', e => e.target == e.currentTarget ? toggle('.video', 'show') : e.preventDefault())
+
+window.addEventListener('click', e => console.log(e.target))

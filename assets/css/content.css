@@ -59,4 +59,19 @@
     align-items: center;
     gap: 20px 0;
     margin-bottom: 10px;
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.listPrev, .listNext {
+    position: absolute;
+    left: 0;
+    font-size: 4.5rem;
+    color: #fff;
+}
+
+.listNext {
+    left: unset;
+    right: 0;
 }
