@@ -20,7 +20,8 @@ const renderFilm = (listFilm, className) => {
         window.location.href = './info.html'
     }))
 
-    document.querySelector(className + ' .far.fa-chevron-left').addEventListener('click', () => renderFilm(t(listFilm), className))
+    let prevBtn = document.querySelector(className + ' .far.fa-chevron-left')
+    prevBtn.addEventListener('click', () => renderFilm(prev(listFilm), className))
     document.querySelector(className + ' .far.fa-chevron-right').addEventListener('click', () => renderFilm(next(listFilm), className))
 }
 
