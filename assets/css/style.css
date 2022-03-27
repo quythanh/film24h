@@ -15,8 +15,9 @@ html {
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     background-color: #181818;
+    position: relative;
 }
 
 ul {
@@ -28,6 +29,7 @@ ul {
     height: 64px;
     padding: 0 10px;
     background-color: #262626;
+    z-index: 1;
 }
 
 .header {
@@ -39,7 +41,7 @@ ul {
 
 .footer {
     bottom: 0;
-    position: absolute;
+    position: fixed;
     text-align: right;
 }
 
@@ -87,8 +89,14 @@ ul {
     transition: .25s;
 }
 
+.header__nav__item > a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
 .header__nav__item:hover,
-.header__nav__item:hover.active {
+.header__nav__item:hover.active,
+.header__nav__item:hover > a {
     color: #ff4d00;
 }
 
@@ -99,7 +107,18 @@ ul {
 }
 
 .header__subnav {
+    position: absolute;
+    top: 50px;
+    display: none;
+    background: #262626;
+    width: 100px;
+    padding: 10px;
+}
 
+#category:hover .header__subnav{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .header__search {

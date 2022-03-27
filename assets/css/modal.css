@@ -82,7 +82,7 @@
     transform: scale(.9);
 }
 
-.modal.hide {
+.hide {
     display: none;
 }
 

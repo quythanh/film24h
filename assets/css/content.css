@@ -1,5 +1,5 @@
 .content {
-    padding: 100px 20px 0;
+    padding: 100px 20px;
 }
 
 .content>p {
@@ -51,10 +51,12 @@
     gap: 5px;
 }
 
-.content__list-film {
+.content__suggest,
+.content__top-view {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     gap: 20px 0;
+    margin-bottom: 10px;
 }

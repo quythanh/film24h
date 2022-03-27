@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    
-    <!-- CSS -->
+    <title>Info</title>
     <link rel="shortcut icon" type="image/png" href="./assets/img/favicon.png" />
     <link rel="stylesheet" href="./assets/css/fontawesomepro/all.css" />
+    <link rel="stylesheet" href="./assets/css/info.css" />
     <link rel="stylesheet" href="./assets/css/modal.css" />
-    <link rel="stylesheet" href="./assets/css/content.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
@@ -37,17 +35,8 @@
         </div>
         
         <div class="header__nav">
-            <div class="header__nav__item active">Home</div>
-            <div class="header__nav__item" id="category">
-                Category
-                <ul class="header__subnav">
-                    <li class="subnav__item">Adventure</li>
-                    <li class="subnav__item">Action</li>
-                    <li class="subnav__item">Comedy</li>
-                    <li class="subnav__item">Drama</li>
-                    <li class="subnav__item">Honor</li>
-                </ul>
-            </div>
+            <div class="header__nav__item"><a href="./index.html">Home</a></div>
+            <div class="header__nav__item">Category</div>
             <div class="header__nav__item" id="premium">Premium</div>
         </div>
         
@@ -57,22 +46,17 @@
         </div>
     </div>
 
-    <div class="content">
-        <p>Suggest</p>
-        <div class="content__suggest"></div>
 
-        <p>Top View</p>
-        <div class="content__top-view"></div>
-    </div>
+    <div class="info"></div>
 
     <div class="footer">
         <a href="https://github.com/quythanh/film24h">
             <img src="./assets/img/github_link.png" alt="Github" target="_blank" />
         </a>
     </div>
-    
+
     <script src="./assets/js/listFilm.js"></script>
-    <script src="./assets/js/film.js"></script>
     <script src="./assets/js/modal.js"></script>
+    <script src="./assets/js/info.js"></script>
 </body>
 </html>
