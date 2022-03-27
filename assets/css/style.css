@@ -1,0 +1,133 @@
+:root {
+    --text-color: #d1d5db;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    user-select: none;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #181818;
+}
+
+ul {
+    list-style: none;
+}
+
+.header, .footer {
+    width: 100%;
+    height: 64px;
+    padding: 0 10px;
+    background-color: #262626;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    bottom: 0;
+    position: absolute;
+    text-align: right;
+}
+
+.footer a {
+    display: flex;
+    height: 100%;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.footer img {
+    height: 75%;
+    opacity: .5;
+    transition: .25s;
+}
+
+.footer img:hover {
+    opacity: 1;
+}
+
+.header__logo {
+    position: absolute;
+    height: 100%;
+    left: 10px;
+}
+
+.header__logo img {
+    height: 100%;
+    cursor: pointer;
+}
+
+.header__nav {
+    display: flex;
+    gap: 20px;
+    height: 60%;
+}
+
+.header__nav__item {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 5px;
+    transition: .25s;
+}
+
+.header__nav__item:hover,
+.header__nav__item:hover.active {
+    color: #ff4d00;
+}
+
+.header__nav__item.active {
+    color: #fff;
+    font-size: 1.7rem;
+    border-bottom: 2px solid #ff4d00;
+}
+
+.header__subnav {
+
+}
+
+.header__search {
+    position: absolute;
+    right: 10px;
+    background-color: #0d0d0d;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 8px;
+    display: flex;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    align-items: center;
+}
+
+.header__search input {
+    width: 0;
+    transition: .25s;
+    background: rgba(255, 255, 255, .8);
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    background: transparent;
+}
+
+.header__search:hover input,
+.header__search input:not(:placeholder-shown) {
+    margin-left: 10px;    
+    color: var(--text-color);
+    width: 100%;
+}
