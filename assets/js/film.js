@@ -19,5 +19,7 @@ const renderFilm = (listFilm, className) => {
     }))
 }
 
-renderFilm(listFilm.splice(0, 4), '.content__suggest')
-renderFilm(listFilm.sort( compare ), '.content__top-view')
+listFilm.then(res => {
+    renderFilm(res.splice(0, 4), '.content__suggest')
+    renderFilm(res.sort( compare ), '.content__top-view')
+})
