@@ -28,10 +28,8 @@ listFilm.then(res => {
         </div>
     </div>
     `
+
+    document.querySelector('.info__btn-play').addEventListener('click', () => toggle('.video', 'show'))
+    document.querySelector('.video').addEventListener('click', e => e.target == e.currentTarget ? toggle('.video', 'show') : e.preventDefault())
 })
-const video = document.querySelector('.video')
-document.querySelector('.info__btn-play').addEventListener('click', () => toggle('.video', 'show'))
 
-video.addEventListener('click', e => e.target == e.currentTarget ? toggle('.video', 'show') : e.preventDefault())
-
-window.addEventListener('click', e => console.log(e.target))
